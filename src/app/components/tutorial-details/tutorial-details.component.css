@@ -1,0 +1,32 @@
+.edit-form {
+  max-width: 400px;
+  margin: auto;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+  margin-right: 8px;
+}
+
+.badge-warning {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.badge-primary {
+  background-color: #0783ff
+}
+
+.badge-danger {
+  background-color: #dc3535
+}
+
+.badge-success {
+  background-color: #28a745
+}
