@@ -1,20 +1,20 @@
 ```markdown
-# Tutorials CRUD App
+# Tutorials Management Application
 
 A simple Spring Boot application demonstrating CRUD operations with MySQL, JPA, and Flyway database migrations.
 
 ## Features
 
-- RESTful API for managing tutorials
-- MySQL database integration
-- Database migrations with Flyway
-- Maven build system
+— RESTful API for managing tutorials
+— MySQL database integration
+— Database migrations with Flyway
+— Maven build system
 
 ## Prerequisites
 
-- Java 17+
-- Maven 3.8+
-- Docker
+— Java 17+
+— Maven 3.8+
+— Docker/Podman
 
 ## Getting Started
 
@@ -22,8 +22,11 @@ A simple Spring Boot application demonstrating CRUD operations with MySQL, JPA, 
 
 Run the following command to start a MySQL 8.1 container:
 
-sh
-docker run --name mysql-8.1 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=tutorials -e MYSQL_USER=root -e MYSQL_PASSWORD=michaeljuren -p 3399:3306 -d mysql:8.1
+sh - for Docker
+docker run --name mysql-8.1 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=tutorials -e MYSQL_USER=root -e MYSQL_PASSWORD=root -p 3397:3306 -d mysql:8.1
+
+sh - for Podman
+podman run --name mysql-8.1 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=tutorials -e MYSQL_USER=root -e MYSQL_PASSWORD=root -p 3397:3306 -d mysql:8.1
 ```
 
 ### 2. Build the Project
@@ -50,7 +53,7 @@ The app will be available at [http://localhost:8080](http://localhost:8080).
 
 Database connection settings are in `src/main/resources/application.properties`:
 
-- URL: `jdbc:mysql://localhost:3399/tutorials`
+- URL: `jdbc:mysql://localhost:3397/tutorials`
 - Username: `root`
 - Password: `root`
 
