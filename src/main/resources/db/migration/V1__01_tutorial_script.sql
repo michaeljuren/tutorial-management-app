@@ -1,15 +1,11 @@
-DROP DATABASE  IF EXISTS tutorials;
-CREATE DATABASE IF NOT EXISTS tutorials;
-USE tutorials;
-
-CREATE TABLE tutorials (
+CREATE TABLE tutorial (
     id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(255),
     description TEXT,
     published BOOLEAN
 );
 
-INSERT INTO tutorials (title, description, published) VALUES
+INSERT INTO tutorial (title, description, published) VALUES
 ('Introduction to Java', 'Learn the basics of Java programming.', true),
 ('Spring Boot Guide', 'Comprehensive guide to building REST APIs with Spring Boot.', true),
 ('Understanding JPA', 'A tutorial on Java Persistence API with examples.', false),
