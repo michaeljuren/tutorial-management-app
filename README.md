@@ -1,7 +1,8 @@
 ```markdown
 # Tutorials Management Application
 
-A simple Spring Boot application demonstrating CRUD operations with MySQL, JPA, and Flyway database migrations.
+A simple Spring Boot application demonstrating CRUD operations with MySQL, JPA, 
+and Flyway database migrations.
 
 ## Features
 
