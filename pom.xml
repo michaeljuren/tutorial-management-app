@@ -62,8 +62,6 @@
             <artifactId>flyway-mysql</artifactId>
             <version>11.9.0</version>
         </dependency>
-
-
     </dependencies>
 
     <build>
@@ -77,11 +75,12 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>11.9.0</version>
                 <configuration>
-                    <url>jdbc:mysql://localhost:3399/tutorials</url>
+                    <url>jdbc:mysql://localhost:3397/tutorials</url>
                     <user>root</user>
                     <password>root</password>
                     <baselineOnMigrate>true</baselineOnMigrate>
                     <cleanDisabled>false</cleanDisabled>
+                    <baselineOnMigrate>true</baselineOnMigrate>
                 </configuration>
             </plugin>
         </plugins>
