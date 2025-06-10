@@ -1,32 +1,312 @@
-.edit-form {
-  max-width: 400px;
-  margin: auto;
+/* Main Container Styling */
+.tutorial-details {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  min-height: 300px;
 }
 
+/* Header Styling */
+.tutorial-details h4 {
+  color: #1f2937;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.tutorial-details h4::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  margin: 0.5rem 0 0;
+  border-radius: 2px;
+}
+
+/* View Mode Styling */
+.tutorial-info {
+  margin-bottom: 1.5rem;
+}
+
+.tutorial-info div {
+  margin-bottom: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.tutorial-info div:last-of-type {
+  border-bottom: none;
+}
+
+.tutorial-info label {
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  margin-right: 0.5rem;
+  display: inline-block;
+  min-width: 100px;
+}
+
+.tutorial-info div:not(label) {
+  color: #374151;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Edit Form Styling */
+.edit-form {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.edit-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.edit-form .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #374151;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.edit-form .form-control {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.edit-form .form-control:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background-color: #fefefe;
+}
+
+.edit-form .form-control:hover {
+  border-color: #9ca3af;
+}
+
+/* Status Display in Edit Mode */
+.edit-form .form-group:has(label:contains("Status")) {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #3b82f6;
+}
+
+/* Badge/Button Styling */
 .badge {
   display: inline-block;
-  padding: 0.4em 0.8em;
+  padding: 0.5rem 1rem;
   font-size: 0.875rem;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
-  border-radius: 0.25rem;
-  white-space: nowrap;
-  margin-right: 8px;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  margin-right: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
+.badge:hover {
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.badge:active {
+  transform: translateY(0);
+}
+
+/* Badge Variants */
 .badge-warning {
-  background-color: #ffc107;
-  color: #212529;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.badge-warning:hover {
+  background: linear-gradient(135deg, #d97706, #b45309);
+  color: white;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
 }
 
 .badge-primary {
-  background-color: #0783ff
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.badge-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
 }
 
 .badge-danger {
-  background-color: #dc3535
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+.badge-danger:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: white;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
 }
 
 .badge-success {
-  background-color: #28a745
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.badge-success:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+  color: white;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+/* Button Group Styling */
+.button-group {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Message Styling */
+.message {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.message.success {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.message.error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+/* Empty State Styling */
+.empty-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #9ca3af;
+}
+
+.empty-state p {
+  font-size: 1.125rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.empty-state::before {
+  content: '📚';
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+/* Status Badge in View Mode */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-published {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Utility Classes */
+.mr-2 {
+  margin-right: 0.75rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.75rem !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tutorial-details {
+    padding: 1.5rem 1rem;
+  }
+
+  .tutorial-details h4 {
+    font-size: 1.25rem;
+  }
+
+  .badge {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  .tutorial-info label {
+    min-width: auto;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form validation styling */
+.edit-form .form-control.ng-invalid.ng-touched {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.edit-form .form-control.ng-valid.ng-touched {
+  border-color: #10b981;
 }
