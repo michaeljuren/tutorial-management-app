@@ -1,59 +1,163 @@
-# TutorialCrudProject
+```markdown
+## Tutorials Management Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
+A simple Angular application for managing tutorials, demonstrating full CRUD (Create, Read, Update, Delete) operations. The frontend is built with Angular and communicates with a backend REST API.
 
-## Development server
+## Table of Contents
 
-To start a local development server, run:
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Application](#running-the-application)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [Development](#development)
+  - [Code Scaffolding](#code-scaffolding)
+  - [Building](#building)
+  - [Running Unit Tests](#running-unit-tests)
+  - [Running End-to-End Tests](#running-end-to-end-tests)
+- [API Reference](#api-reference)
+- [Contributing](#contributing)
+- [License](#license)
 
+## Features
+
+- Add new tutorials
+- View a list of tutorials
+- Edit and update existing tutorials
+- Delete tutorials
+- Search tutorials by title
+
+## Tech Stack
+
+- [Angular](https://angular.io/) 19.x
+- [TypeScript](https://www.typescriptlang.org/)
+- [RxJS](https://rxjs.dev/)
+- [Bootstrap](https://getbootstrap.com/) (for UI styling)
+- [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) (for development)
+- Backend: Expects a REST API (e.g., Node/Express, Spring Boot, etc.)
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
+- [Angular CLI](https://angular.io/cli) (install globally with `npm install -g @angular/cli`)
+- A running backend REST API (default: `http://localhost:8080/api/tutorials`)
+```
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/michaeljuren/tutorial-management-frontend.git
+   cd TutorialCrudProject/Frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Application
+
+Start the Angular development server:
 ```bash
 ng serve
 ```
+Navigate to [http://localhost:4200/](http://localhost:4200/) in your browser.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Project Structure
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+Frontend/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── add-tutorial/
+│   │   │   ├── tutorial-list/
+│   │   │   └── ...
+│   │   ├── models/
+│   │   │   └── tutorial.model.ts
+│   │   ├── services/
+│   │   │   └── tutorial.service.ts
+│   │   └── app.module.ts
+│   └── ...
+├── package.json
+└── README.md
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Usage
 
+- **Add Tutorial:** Fill in the title and description, then click "Submit".
+- **View Tutorials:** Tutorials are listed on the main page.
+- **Edit Tutorial:** Click on a tutorial to edit its details.
+- **Delete Tutorials:** Remove all tutorials from the list.
+- **Search:** Use the search bar to filter tutorials by title.
+
+## Development
+
+### Code Scaffolding
+
+Generate a new component:
+```bash
+ng generate component component-name
+# or shorthand
+ng g c component-name
+```
+Generate a service:
+```bash
+ng generate service service-name
+# or shorthand
+ng g s service-name
+```
+For more options, run:
 ```bash
 ng generate --help
 ```
 
-## Building
+### Building
 
-To build the project run:
-
+Build the project for production:
 ```bash
 ng build
 ```
+The build artifacts will be stored in the `dist/` directory.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### Running Unit Tests
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
+Run unit tests with [Karma](https://karma-runner.github.io):
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+### Running End-to-End Tests
 
-For end-to-end (e2e) testing, run:
-
+Run e2e tests (if configured):
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## API Reference
 
-## Additional Resources
+The frontend expects a REST API with the following endpoints:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- `GET /api/tutorials` — List all tutorials
+- `GET /api/tutorials/:id` — Get a tutorial by ID
+- `POST /api/tutorials` — Create a new tutorial
+- `PUT /api/tutorials/:id` — Update a tutorial
+- `DELETE /api/tutorials/:id` — Delete a tutorial
+- `DELETE /api/tutorials` — Delete all tutorials
+- `GET /api/tutorials/title/:title` — Find tutorials by title
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
+```
