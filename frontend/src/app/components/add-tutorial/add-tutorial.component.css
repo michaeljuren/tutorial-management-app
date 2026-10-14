@@ -1,0 +1,173 @@
+/* Container Styling */
+.submit-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+/* Header Styling */
+.submit-form h4 {
+  color: #1f2937;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.submit-form h4::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
+}
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #374151;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+/* Input Styling */
+.form-control {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background-color: #fefefe;
+}
+
+.form-control:hover {
+  border-color: #9ca3af;
+}
+
+/* Button Styling */
+.btn {
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  min-width: 120px;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  box-shadow: 0 2px 10px rgba(16, 185, 129, 0.3);
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+}
+
+.btn-success:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+/* Success Message Styling */
+.success-message {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.success-message h4 {
+  color: #10b981;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.success-message h4::after {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+/* Utility Classes */
+.mt-3 {
+  margin-top: 1.5rem !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .submit-form {
+    margin: 1rem;
+    padding: 2rem 1.5rem;
+    max-width: none;
+  }
+
+  .submit-form h4 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+}
+
+/* Animation for form appearance */
+.submit-form {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading state for button (optional) */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Form validation styling (optional) */
+.form-control.ng-invalid.ng-touched {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.form-control.ng-valid.ng-touched {
+  border-color: #10b981;
+}
