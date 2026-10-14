@@ -1,0 +1,1 @@
+docker run --name mysql-8.1 -e MYSQL_ROOT_PASSWORD=root  -e MYSQL_DATABASE=tutorials   -e MYSQL_USER=root   -e MYSQL_PASSWORD=michaeljuren   -p 3399:3306  -d mysql:8.1
